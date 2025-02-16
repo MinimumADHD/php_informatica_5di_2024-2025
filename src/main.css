@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "FiraCode";
+  font-style: normal;
+  src: url("../fonts/FiraCode-Regular.woff2") format("woff2");
+}
+
+@theme {
+  --font-fira: "FiraCode"
+}

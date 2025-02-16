@@ -23,3 +23,7 @@ The fonts used in this repository will be updated and linked to their respective
 * [Fira Code](https://github.com/tonsky/FiraCode)
 
 This work is [licensed under the GNU GPL v3.0](LICENSE).
+
+
+
+(tbh do whatever you want with this repo, it's only a school project anyway so you may even copy my work idrc)

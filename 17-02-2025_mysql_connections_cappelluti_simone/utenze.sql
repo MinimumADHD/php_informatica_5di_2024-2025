@@ -12,7 +12,10 @@ CREATE TABLE utente(
 
 INSERT INTO utente(fname, lname, city, bdate)
 VALUES
-("Simone", "Cappelluti", "Parabiago", "2006-11-14");
+("Simone", "MathiasRiva", "Milano", "2006-11-14"),
+("Antonio", "Spadafora", "Catanissetta", "1965-03-22"),
+("Davide", "Proficuo", "Tacc", "2006-01-02"),
+("Tommaso", "Orfani", "Bho", "2006-00-00");
 
 SELECT *
 FROM utente;

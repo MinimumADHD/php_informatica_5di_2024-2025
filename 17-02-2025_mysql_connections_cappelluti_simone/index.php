@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../src/output.css">
 </head>
 
-<body class="w-full h-full bg-amber-600">
+<body class="w-full h-full bg-gradient-to-b from-gray-900 to-gray-950">
     <table class="w-auto h-auto">
         <?php
         $host_name = (string) "localhost";

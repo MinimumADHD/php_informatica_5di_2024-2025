@@ -2,10 +2,23 @@
 
 @font-face {
   font-family: "FiraCode";
-  font-style: normal;
   src: url("../fonts/FiraCode-Regular.woff2") format("woff2");
 }
 
+@font-face {
+  font-family: "ConsoleNeue";
+  src: url(../fonts/clacon2.woff2) format("woff2");
+}
+
 @theme {
-  --font-fira: "FiraCode"
+  --font-fira: "FiraCode";
+  --font-clacon: "ConsoleNeue";
+  --color-gruvbox-red: #fb4934;
+  --color-gruvbox-green: #b8bb26;
+  --color-gruvbox-yellow: #fabd2f;
+  --color-gruvbox-blue: #83a598;
+  --color-gruvbox-purple: #d3869b;
+  --color-gruvbox-aqua: #8ec07c;
+  --color-gruvbox-background: #282828;
+  --color-gruvbox-text: #ebdbb2;
 }

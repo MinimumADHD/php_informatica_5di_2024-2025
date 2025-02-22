@@ -16,20 +16,22 @@
         <form action="register.php" method="post" class="w-auto h-auto p-4 bg-gruvbox-red text-lg rounded-sm shadow-2xl">
             <div id="personal_data">
                 <label for="fname">Nome:</label>
-                <input type="text" name="fname" id="fname">
+                <input type="text" name="fname" id="fname" class="w-full">
                 <br>
                 <label for="lname">Cognome:</label>
-                <input type="text" name="lname" id="lname">
+                <input type="text" name="lname" id="lname" class="w-full">
                 <br>
                 <label for="mail">Email:</label>
-                <input type="email" name="mail" id="mail">
+                <input type="email" name="mail" id="mail" class="w-full">
+                <p class="text-base text-gruvbox-red" id="email_warning">Pattern e-mail non corretto.</p>
             </div>
             <div id="login_info">
                 <label for="password">Password:</label>
                 <input type="password" name="password" id="password">
+                <p class="text-base text-gruvbox-red" id="password_warning">Password non abbastanza forte. Assicurati che sia sotto i sopra 8 caratteri, inferiore a 12 e contenga almeno un numero e un carattere sepciale.</p>
             </div>
             <br>
-            <input type="submit" value="Registrati" class="p-2 w-auto h-auto bg-gruvbox-text text-gruvbox-red self-center justify-self-centers">
+            <input type="submit" value="Registrati" id="submit_button" class="p-2 w-auto h-auto bg-gruvbox-text text-gruvbox-red self-center justify-self-centers">
         </form>
         <div id="php_div">
             <?php

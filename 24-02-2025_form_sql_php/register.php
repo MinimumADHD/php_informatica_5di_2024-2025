@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registrazione</title>
     <link rel="stylesheet" href="../src/output.css">
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
 </head>
 
 <body class="min-w-full min-h-full w-full h-full font-clacon text-sm text-gruvbox-text bg-gruvbox-background">
@@ -28,16 +29,50 @@
             <div id="login_info">
                 <label for="password">Password:</label>
                 <input type="password" name="password" id="password">
-                <p class="text-base text-gruvbox-red" id="password_warning">Password non abbastanza forte. Assicurati che sia sotto i sopra 8 caratteri, inferiore a 12 e contenga almeno un numero e un carattere sepciale.</p>
+                <p class="text-base text-gruvbox-red" id="password_warning">Password non abbastanza forte. CONSIGLIO: Da 8 a 14 caratteri, Almeno 1 numero, Almeno 1 carattere speciale.</p>
             </div>
             <br>
-            <input type="submit" value="Registrati" id="submit_button" class="p-2 w-auto h-auto bg-gruvbox-text text-gruvbox-red self-center justify-self-centers">
+            <input type="submit" name="submit" value="Registrati" id="submit_button" class="p-2 w-auto h-auto bg-gruvbox-text text-gruvbox-red self-center justify-self-centers">
         </form>
         <div id="php_div">
-            <?php
-            ?>
+            <table>
+                <?php
+                $host_name = (string) "localhost";
+                $user_name = (string) "root";
+                $pass_word = (string) "";
+                $data_base_name = (string) "ecommerce_cannizzaro";
+
+                if (isset($_POST["submit"]) && !empty($_POST)) {
+                    $fname_post = $_POST["fname"];
+                    $lname_post = $_POST["lname"];
+                    $email_post = $_POST["mail"];
+                    $password_post = $_POST["password"];
+
+                    $connection = mysqli_connect($host_name, $user_name, $pass_word, $data_base_name);
+
+                    if (mysqli_connect_errno() && mysqli_errno($connection) != 0)
+                        return;
+                    $table_query = mysqli_query($connection, "INSERT INTO users (fname, lname, email, pass_word) VALUES ('{$fname_post}', '{$lname_post}', '{$email_post}', '{$password_post}');");
+                    /*$search_query = mysqli_query($connection, "SELECT * FROM users");
+                    foreach ($search_query as $key => $row) {
+                        echo "<tr>";
+                        foreach ($row as $column_name => $column_value) {
+                            echo "<td>{$column_value}</td>";
+                        }
+                        echo "</tr>";
+                    }*/
+                    if ($table_query) {
+                        header('./index.php');
+                        exit();
+                    } else {
+                        echo"Errore inserimento dati.";
+                    }
+                }
+                ?>
+            </table>
         </div>
     </main>
 </body>
 <script src="./register.js"></script>
+
 </html>

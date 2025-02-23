@@ -10,7 +10,7 @@ function validateForm() {
 }
 function password_check() {
     var value = password_field.value;
-    var count_check = value.length >= 8 && value.length <= 12;
+    var count_check = value.length >= 8 && value.length <= 14;
     var number_check = /\d/.test(value);
     var special_check = /[!@#$%^&*(),.?":{}|<>]/.test(value);
     if (!count_check || !number_check || !special_check) {

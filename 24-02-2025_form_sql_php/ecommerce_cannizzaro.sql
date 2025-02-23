@@ -11,8 +11,8 @@ CREATE TABLE
     users (
         user_id INT AUTO_INCREMENT PRIMARY KEY,
         email VARCHAR(35) UNIQUE NOT NULL,
-        fname VARCHAR(25),
-        lname VARCHAR(25),
+        fname VARCHAR(25) NOT NULL,
+        lname VARCHAR(25) NOT NULL,
         pass_word VARCHAR(12) NOT NULL
     );
 

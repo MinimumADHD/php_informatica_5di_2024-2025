@@ -13,7 +13,7 @@ function validateForm(): void {
 
 function password_check(): boolean {
     const value = password_field.value;
-    const count_check = value.length >= 8 && value.length <= 12;
+    const count_check = value.length >= 8 && value.length <= 14;
     const number_check = /\d/.test(value);
     const special_check = /[!@#$%^&*(),.?":{}|<>]/.test(value);
 

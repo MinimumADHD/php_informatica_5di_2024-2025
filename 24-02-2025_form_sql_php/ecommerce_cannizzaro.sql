@@ -28,8 +28,9 @@ CREATE TABLE
     purchases (
         purchase_id INT AUTO_INCREMENT PRIMARY KEY,
         purchase_date DATE NOT NULL,
-        user_id INT,
-        product_id INT,
+        user_id INT NOT NULL,
+        product_id INT NOT NULL,
+        -- quantity INT NOT NULL,
         CONSTRAINT fk_users FOREIGN KEY (user_id) REFERENCES users (user_id) ON DELETE CASCADE,
         CONSTRAINT fk_products FOREIGN KEY (product_id) REFERENCES products (product_id)
     );

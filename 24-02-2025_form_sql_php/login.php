@@ -34,7 +34,7 @@
             </div>
         </form>
         <div class="w-50 h-70 text-gruvbox-text">
-            <h1 class="w-full h-20 flex justify-center items-center align-middle content-center gap-2 bg-gruvbox-red">Honest<img src="../the_gif.gif" alt="bho" class="w-20 h-10">reaction:</h1>
+            <h1 class="w-full h-20 flex justify-center items-center align-middle content-center gap-2 bg-gruvbox-red p-2">Honest<img src="../the_gif.gif" alt="bho" class="w-20 h-10">reaction:</h1>
             <img src="../the_gif.gif" alt="bho" class="w-50 h-50">
         </div>
     </main>

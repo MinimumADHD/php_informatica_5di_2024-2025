@@ -23,7 +23,7 @@
             <label for="price">Prezzo:</label>
             <input type="number" required min="1.00" max="999.99" step=".01" name="price" id="price" class="bg-gruvbox-text text-gruvbox-aqua p-2">
         </div>
-        <input type="submit" value="Aggiungi Prodotto" name="submit" class="bg-gruvbox-text text-gruvbox-aqua p-2">
+        <input type="submit" value="Aggiungi Prodotto" name="submit" class="bg-gruvbox-text text-gruvbox-aqua p-2 animate-pulse">
     </form>
 </body>
 <?php
